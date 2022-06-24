@@ -1,0 +1,159 @@
+{
+  "compiler": {
+    "version": "0.8.15+commit.e14f2714"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "inputs": [],
+        "name": "Unauthorized",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "ZeroAddress",
+        "type": "error"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "previousOwner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "acceptOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "cancelOwnershipTransfer",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "isOwner",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "details": "Contract module which provides a basic access control mechanism, where there is an account (an owner) that can be granted exclusive access to specific functions. This module is used through inheritance. It will make available the modifier `onlyOwner`, which can be aplied to your functions to restrict their use to the owner. In order to transfer ownership, a recipient must be specified, at which point the specified recipient can call `acceptOwnership` and take ownership.",
+      "kind": "dev",
+      "methods": {
+        "acceptOwnership()": {
+          "details": "Transfers ownership of the contract to the caller. Can only be called by a new potential owner set by the current owner."
+        },
+        "cancelOwnershipTransfer()": {
+          "details": "Cancel a transfer of ownership to a new account. Can only be called by the current owner."
+        },
+        "constructor": {
+          "details": "Initialize contract by setting transaction submitter as initial owner."
+        },
+        "isOwner()": {
+          "details": "Returns true if the caller is the current owner."
+        },
+        "owner()": {
+          "details": "Returns the address of the current owner."
+        },
+        "transferOwnership(address)": {
+          "details": "Allows a new account (`newOwner`) to accept ownership. Can only be called by the current owner."
+        }
+      },
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {},
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "TwoStepOwnable.sol": "TwoStepOwnable"
+    },
+    "debug": {
+      "revertStrings": "strip"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "none"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": [
+      ":@openzeppelin/=node_modules/@openzeppelin/",
+      ":@uniswap/=node_modules/@uniswap/",
+      ":build/=/",
+      ":ds-test/=lib/forge-std/lib/ds-test/src/",
+      ":forge-std/=lib/forge-std/src/",
+      ":hardhat/=node_modules/hardhat/"
+    ],
+    "viaIR": true
+  },
+  "sources": {
+    "TwoStepOwnable.sol": {
+      "keccak256": "0xd7c4131102437397ebf5f3df2ff3be0e6e7655c57b23785e6a269697c0639580",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://1b91f0106a49b111e7982c610bca628949c9583440cbb85f1c6d6a26bddaaa0a",
+        "dweb:/ipfs/QmWHYNHpoaGezsuZk7rMHCvD7MKjMFVvX5wRwAn7WMmPYP"
+      ]
+    }
+  },
+  "version": 1
+}

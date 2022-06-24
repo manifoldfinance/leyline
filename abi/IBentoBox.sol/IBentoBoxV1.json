@@ -1,0 +1,717 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract IFlashBorrower",
+          "name": "borrower",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "flashLoan",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "totals",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "elastic",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint128",
+          "name": "base",
+          "type": "uint128"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "flashLoan(address,address,address,uint256,bytes)": "f1676d37",
+    "totals(address)": "4ffe34db"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.15+commit.e14f2714\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract IFlashBorrower\",\"name\":\"borrower\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"receiver\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"flashLoan\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"totals\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"elastic\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"base\",\"type\":\"uint128\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"Minimal interface for BentoBox token vault (V1) interactions\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"IBentoBox.sol\":\"IBentoBoxV1\"},\"debug\":{\"revertStrings\":\"strip\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":@uniswap/=node_modules/@uniswap/\",\":build/=/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\"],\"viaIR\":true},\"sources\":{\"IBentoBox.sol\":{\"keccak256\":\"0xc66b95543ca43975eccd2d6949f3aa478ed478d31bdaad1e08f9ee80727a5216\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9e525ec05b7e6c44d440b2190a83b7429550dad92b12095007a8c39cbf36ab64\",\"dweb:/ipfs/QmPZvpdZ7SxuHrH4x234hnNJJSiC65QSVdG4CvwdcmtVFT\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.15+commit.e14f2714"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "contract IFlashBorrower",
+              "name": "borrower",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "receiver",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "flashLoan"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "totals",
+          "outputs": [
+            {
+              "internalType": "uint128",
+              "name": "elastic",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint128",
+              "name": "base",
+              "type": "uint128"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":build/=/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "IBentoBox.sol": "IBentoBoxV1"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "IBentoBox.sol": {
+        "keccak256": "0xc66b95543ca43975eccd2d6949f3aa478ed478d31bdaad1e08f9ee80727a5216",
+        "urls": [
+          "bzz-raw://9e525ec05b7e6c44d440b2190a83b7429550dad92b12095007a8c39cbf36ab64",
+          "dweb:/ipfs/QmPZvpdZ7SxuHrH4x234hnNJJSiC65QSVdG4CvwdcmtVFT"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "irOptimized": "",
+  "ast": {
+    "absolutePath": "IBentoBox.sol",
+    "id": 478,
+    "exportedSymbols": {
+      "IBentoBoxV1": [
+        477
+      ],
+      "IFlashBorrower": [
+        452
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "33:3613:3",
+    "nodes": [
+      {
+        "id": 437,
+        "nodeType": "PragmaDirective",
+        "src": "33:32:3",
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".15",
+          "<",
+          "0.9",
+          ".0"
+        ]
+      },
+      {
+        "id": 452,
+        "nodeType": "ContractDefinition",
+        "src": "1429:670:3",
+        "nodes": [
+          {
+            "id": 451,
+            "nodeType": "FunctionDefinition",
+            "src": "1940:157:3",
+            "documentation": {
+              "id": 438,
+              "nodeType": "StructuredDocumentation",
+              "src": "1460:475:3",
+              "text": "@notice The flashloan callback. `amount` + `fee` needs to repayed to msg.sender before this call returns.\n @param sender The address of the invoker of this flashloan.\n @param token The address of the token that is loaned.\n @param amount of the `token` that is loaned.\n @param fee The fee that needs to be paid on top for this loan. Needs to be the same as `token`.\n @param data Additional data that was passed to the flashloan function."
+            },
+            "functionSelector": "23e30c8b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "onFlashLoan",
+            "nameLocation": "1949:11:3",
+            "parameters": {
+              "id": 449,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 440,
+                  "mutability": "mutable",
+                  "name": "sender",
+                  "nameLocation": "1978:6:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 451,
+                  "src": "1970:14:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 439,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1970:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 442,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "2002:5:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 451,
+                  "src": "1994:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 441,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1994:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 444,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "2025:6:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 451,
+                  "src": "2017:14:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 443,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2017:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 446,
+                  "mutability": "mutable",
+                  "name": "fee",
+                  "nameLocation": "2049:3:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 451,
+                  "src": "2041:11:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 445,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2041:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 448,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "2077:4:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 451,
+                  "src": "2062:19:3",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 447,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2062:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1960:127:3"
+            },
+            "returnParameters": {
+              "id": 450,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2096:0:3"
+            },
+            "scope": 452,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IFlashBorrower",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          452
+        ],
+        "name": "IFlashBorrower",
+        "nameLocation": "1439:14:3",
+        "scope": 478,
+        "usedErrors": []
+      },
+      {
+        "id": 477,
+        "nodeType": "ContractDefinition",
+        "src": "2174:1471:3",
+        "nodes": [
+          {
+            "id": 467,
+            "nodeType": "FunctionDefinition",
+            "src": "3388:169:3",
+            "functionSelector": "f1676d37",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "flashLoan",
+            "nameLocation": "3397:9:3",
+            "parameters": {
+              "id": 465,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 456,
+                  "mutability": "mutable",
+                  "name": "borrower",
+                  "nameLocation": "3431:8:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 467,
+                  "src": "3416:23:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IFlashBorrower_$452",
+                    "typeString": "contract IFlashBorrower"
+                  },
+                  "typeName": {
+                    "id": 455,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 454,
+                      "name": "IFlashBorrower",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 452,
+                      "src": "3416:14:3"
+                    },
+                    "referencedDeclaration": 452,
+                    "src": "3416:14:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IFlashBorrower_$452",
+                      "typeString": "contract IFlashBorrower"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 458,
+                  "mutability": "mutable",
+                  "name": "receiver",
+                  "nameLocation": "3457:8:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 467,
+                  "src": "3449:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 457,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3449:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 460,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "3483:5:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 467,
+                  "src": "3475:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 459,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3475:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 462,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "3506:6:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 467,
+                  "src": "3498:14:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 461,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3498:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 464,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "3537:4:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 467,
+                  "src": "3522:19:3",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 463,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3522:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3406:141:3"
+            },
+            "returnParameters": {
+              "id": 466,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3556:0:3"
+            },
+            "scope": 477,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 476,
+            "nodeType": "FunctionDefinition",
+            "src": "3563:80:3",
+            "functionSelector": "4ffe34db",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "totals",
+            "nameLocation": "3572:6:3",
+            "parameters": {
+              "id": 470,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 469,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "3587:5:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 476,
+                  "src": "3579:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 468,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3579:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3578:15:3"
+            },
+            "returnParameters": {
+              "id": 475,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 472,
+                  "mutability": "mutable",
+                  "name": "elastic",
+                  "nameLocation": "3620:7:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 476,
+                  "src": "3612:15:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 471,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3612:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 474,
+                  "mutability": "mutable",
+                  "name": "base",
+                  "nameLocation": "3637:4:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 476,
+                  "src": "3629:12:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 473,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3629:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3611:31:3"
+            },
+            "scope": 477,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IBentoBoxV1",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 453,
+          "nodeType": "StructuredDocumentation",
+          "src": "2101:73:3",
+          "text": "@notice Minimal interface for BentoBox token vault (V1) interactions"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          477
+        ],
+        "name": "IBentoBoxV1",
+        "nameLocation": "2184:11:3",
+        "scope": 478,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 3
+}

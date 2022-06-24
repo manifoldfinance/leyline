@@ -1,0 +1,56 @@
+{
+  "compiler": {
+    "version": "0.8.15+commit.e14f2714"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [],
+    "devdoc": {
+      "kind": "dev",
+      "methods": {},
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {},
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "DataTypes.sol": "DataTypes"
+    },
+    "debug": {
+      "revertStrings": "strip"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "none"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": [
+      ":@openzeppelin/=node_modules/@openzeppelin/",
+      ":@uniswap/=node_modules/@uniswap/",
+      ":build/=/",
+      ":ds-test/=lib/forge-std/lib/ds-test/src/",
+      ":forge-std/=lib/forge-std/src/",
+      ":hardhat/=node_modules/hardhat/"
+    ],
+    "viaIR": true
+  },
+  "sources": {
+    "DataTypes.sol": {
+      "keccak256": "0x89b5105c6bb2864c161bfc30fc9f16383090108f578dc9517486885a6635e4a6",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://77fbe2a2f456bf5021c86cf416071455880e0297f910ceb59b15e8694dd61be8",
+        "dweb:/ipfs/QmPCjGduUJLBx9dT5Qiu33SeAbDW9FAsd2LLo9sQ7ihHJf"
+      ]
+    }
+  },
+  "version": 1
+}

@@ -1,0 +1,353 @@
+{
+  "compiler": {
+    "version": "0.8.15+commit.e14f2714"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_router",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "inputs": [],
+        "name": "IdenticalAddresses",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InsufficientAAmount",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InsufficientAllowance",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InsufficientBAmount",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InsufficientLiquidity",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InsufficientLiquidity",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InsufficientOutputAmount",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InvalidPath",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "Overflow",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "TransferFailed",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "ZeroAddress",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "ZeroAmount",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "router",
+        "outputs": [
+          {
+            "internalType": "contract IOpenMevRouter",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "tokenA",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "tokenB",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountA",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountBMin",
+            "type": "uint256"
+          }
+        ],
+        "name": "swapAndStakeLiquidity",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "liquidity",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "tokenB",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountBMin",
+            "type": "uint256"
+          }
+        ],
+        "name": "swapETHAndStakeLiquidity",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "liquidity",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "pairAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "withdrawAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "desiredToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "desiredTokenOutMin",
+            "type": "uint256"
+          }
+        ],
+        "name": "withdrawLiquidityAndSwap",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountOut",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "stateMutability": "payable",
+        "type": "receive"
+      }
+    ],
+    "devdoc": {
+      "kind": "dev",
+      "methods": {
+        "swapAndStakeLiquidity(address,address,uint256,uint256)": {
+          "params": {
+            "amountA": "Amount of token A desired to add to pool, inclusive of swap half to tokenB",
+            "amountBMin": "Minimum amount of token B on swap, can be 0",
+            "tokenA": "Token in pool",
+            "tokenB": "Token in pool"
+          },
+          "returns": {
+            "liquidity": "amount of liquidity token received, sent to msg.sender"
+          }
+        },
+        "swapETHAndStakeLiquidity(address,uint256)": {
+          "params": {
+            "amountBMin": "Minimum amount of token B on swap, can be 0",
+            "tokenB": "Token in pool"
+          },
+          "returns": {
+            "liquidity": "amount of liquidity token received, sent to msg.sender"
+          }
+        },
+        "withdrawLiquidityAndSwap(address,uint256,address,uint256)": {
+          "params": {
+            "desiredToken": "Withdrawl token desired",
+            "desiredTokenOutMin": "Minimum amount of total desiredToken, can be 0",
+            "pairAddress": "Address of V2 pool",
+            "withdrawAmount": "Amount of liquidity to withdraw"
+          },
+          "returns": {
+            "amountOut": "Amount of desiredToken received"
+          }
+        }
+      },
+      "title": "OpenMevZapper",
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {
+        "swapAndStakeLiquidity(address,address,uint256,uint256)": {
+          "notice": "Adds liquidity to an ERC-20⇄ERC-20 pool from a single token. msg.sender should have already given the router an allowance of at least amountA on tokenA"
+        },
+        "swapETHAndStakeLiquidity(address,uint256)": {
+          "notice": "Adds liquidity to an ERC-20⇄ERC-20 pool from eth. msg.value is treated as a amountETHDesired. Leftover ETH, if any, is returned to msg.sender"
+        },
+        "withdrawLiquidityAndSwap(address,uint256,address,uint256)": {
+          "notice": "Removes liquidity from an ERC-20⇄ERC-20 pool into a single token / ETH . msg.sender should have already given the zapper an allowance of at least liquidity on the pool."
+        }
+      },
+      "notice": "Optimal UniswapV2Pair Liquidity deposits and withdrawls with a single token / eth (or relevant native currency)",
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "OpenMevZapper.sol": "OpenMevZapper"
+    },
+    "debug": {
+      "revertStrings": "strip"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "none"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": [
+      ":@openzeppelin/=node_modules/@openzeppelin/",
+      ":@uniswap/=node_modules/@uniswap/",
+      ":build/=/",
+      ":ds-test/=lib/forge-std/lib/ds-test/src/",
+      ":forge-std/=lib/forge-std/src/",
+      ":hardhat/=node_modules/hardhat/"
+    ],
+    "viaIR": true
+  },
+  "sources": {
+    "Babylonian.sol": {
+      "keccak256": "0xf62b3ac7753450a557d694c50652929736aa20150fff8dedc103fd6828977ff0",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://121631e5641d8c98ed308c34d076f8fb1ffdeafd1178cb9b1ca5851945cea02c",
+        "dweb:/ipfs/QmbJ6cuGApY3Sk1BFMdXPqGw3pDWrcR3aTwnWdJtLzr5pR"
+      ]
+    },
+    "ERC20.sol": {
+      "keccak256": "0x446f8ef0df6b2b354aebad57597d3cfb8f00d184a6b1a559e70ad2098fd0285a",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://856d220962e1b24efc92b0c2ef31e87ab0b43838e90df5ca3042a08013115951",
+        "dweb:/ipfs/QmWuLL8Vk7DDqNn17KZxLxrYsa8R5MdFtZyFw6pAcerDYg"
+      ]
+    },
+    "IOpenMevRouter.sol": {
+      "keccak256": "0xa1bf6bb8a681a12a11c2b1e5801f38ed7c915ea6590a1b5845a15c844e79123c",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://9e4548fac80db3c2b882bc1da6840451a7fb969a91764a4dfca0e5d350a04d43",
+        "dweb:/ipfs/QmXg3HFh9bTT8XMTbpQDnaQazsbAu6ciZi8WfHEtmSvw4e"
+      ]
+    },
+    "IUniswapV2Factory.sol": {
+      "keccak256": "0x58cc44883e51050422ac5c6deaa9fe818141c85154b2710f989349cb364edcc6",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://fd201f9078066b02b8b21d8c21e30a0f25a6b7b18050a83d75d9a4ee9bdae1f0",
+        "dweb:/ipfs/QmYvT4bJSbRQfVt6A2p1PTEbEgtX9AKRD1mwRMAiNDRDYH"
+      ]
+    },
+    "IUniswapV2Pair.sol": {
+      "keccak256": "0xeb4a2734a0f1e057bc45bd5831614e84159ea3e0bdeb74afa569378024bb0b14",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://fbf37e92eebb821f5643c8d780123f9a490d5676fa058d8b70df9be6761c99ac",
+        "dweb:/ipfs/QmPNNgP29EQQuJPscNYcG7aerCyqxy4ZuyLRPXLfhYoGNH"
+      ]
+    },
+    "IWETH9.sol": {
+      "keccak256": "0x31c2ad22149edc87750d4097eb6c5ce58daadc672fd48979ca66acf269bd3313",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://4818bfab5b2feb2caecc0039d930a68384aa8592cedabfe9cfc4a86be7f04103",
+        "dweb:/ipfs/QmeYqzU46rgyXBJokTqpFf18qmga55iSb5knnULNVV7Jq6"
+      ]
+    },
+    "OpenMevLibrary.sol": {
+      "keccak256": "0x749491764afee344b22cfabea698eae250ec280c9602d09b65743486ee58e517",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://4f0c3d11481e074ae3b1f00cef7ad14878eadca406c19047a95a53a633fc93a0",
+        "dweb:/ipfs/Qmb7tgVKwGBEKQrCZ3YgcgKZRbt2Qy4heUcRD4hBHJcMgc"
+      ]
+    },
+    "OpenMevZapper.sol": {
+      "keccak256": "0x02bcbf7d670bfdaa50aa85bb6de18a6aff447c925b1b6b5ad32a4fe2e06217f5",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://17a1389991924c85cdfbbffa4b242fb9f9be137a7549e93935d4c84de3f1938c",
+        "dweb:/ipfs/QmRknahpGrr7N2ejJbjY48M1wZp2jDAYdMXXkxtTzPPpSH"
+      ]
+    },
+    "SafeTransferLib.sol": {
+      "keccak256": "0xbc990c11ceb0bf7b4cf3d1f944b453683f0852d0a62101b0e17de62f3e7e0636",
+      "license": "AGPL-3.0-only",
+      "urls": [
+        "bzz-raw://80b2b747c84a0a7aca8d65035d5607c7eb8a2ce6014f9db638ba332449d0fd38",
+        "dweb:/ipfs/QmUEky7184PbnEzemVYQC2vbPG55hLU8gPhzrmdeEQ1d8Q"
+      ]
+    },
+    "Uint512.sol": {
+      "keccak256": "0xb2c8b8b27f407ba0edcaec23931aa3102a9a62104026b6b45d8e494c285cb3cf",
+      "license": "GPLv3",
+      "urls": [
+        "bzz-raw://6d4ae175e170ad914e198baacb864483be641ad9c91e87a171d58d7d592c9fe4",
+        "dweb:/ipfs/QmeR329Jc8HAVGVohA9hvGqEuuY7fM2fhxV9jbADYRfa23"
+      ]
+    }
+  },
+  "version": 1
+}

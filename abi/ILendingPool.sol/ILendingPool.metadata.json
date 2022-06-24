@@ -1,0 +1,126 @@
+{
+  "compiler": {
+    "version": "0.8.15+commit.e14f2714"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "receiverAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address[]",
+            "name": "assets",
+            "type": "address[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "amounts",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "modes",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "address",
+            "name": "onBehalfOf",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes",
+            "name": "params",
+            "type": "bytes"
+          },
+          {
+            "internalType": "uint16",
+            "name": "referralCode",
+            "type": "uint16"
+          }
+        ],
+        "name": "flashLoan",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getReservesList",
+        "outputs": [
+          {
+            "internalType": "address[]",
+            "name": "",
+            "type": "address[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "kind": "dev",
+      "methods": {
+        "flashLoan(address,address[],uint256[],uint256[],address,bytes,uint16)": {
+          "details": "Allows smartcontracts to access the liquidity of the pool within one transaction, as long as the amount taken plus a fee is returned. IMPORTANT There are security concerns for developers of flashloan receiver contracts that must be kept into consideration. For further details please visit https://developers.aave.com",
+          "params": {
+            "amounts": "The amounts amounts being flash-borrowed",
+            "assets": "The addresses of the assets being flash-borrowed",
+            "modes": "Types of the debt to open if the flash loan is not returned:   0 -> Don't open any debt, just revert if funds can't be transferred from the receiver   1 -> Open debt at stable rate for the value of the amount flash-borrowed to the `onBehalfOf` address   2 -> Open debt at variable rate for the value of the amount flash-borrowed to the `onBehalfOf` address",
+            "onBehalfOf": "The address  that will receive the debt in the case of using on `modes` 1 or 2",
+            "params": "Variadic packed params to pass to the receiver as extra information",
+            "receiverAddress": "The address of the contract receiving the funds, implementing the IFlashLoanReceiver interface",
+            "referralCode": "Code used to register the integrator originating the operation, for potential rewards.   0 if the action is executed directly by the user, without any middle-man*"
+          }
+        }
+      },
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {},
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "ILendingPool.sol": "ILendingPool"
+    },
+    "debug": {
+      "revertStrings": "strip"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "none"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": [
+      ":@openzeppelin/=node_modules/@openzeppelin/",
+      ":@uniswap/=node_modules/@uniswap/",
+      ":build/=/",
+      ":ds-test/=lib/forge-std/lib/ds-test/src/",
+      ":forge-std/=lib/forge-std/src/",
+      ":hardhat/=node_modules/hardhat/"
+    ],
+    "viaIR": true
+  },
+  "sources": {
+    "ILendingPool.sol": {
+      "keccak256": "0x4f761a812088629d7c4b13f19fe5a2116dcc29deb316f81e145062abde9f4028",
+      "license": "agpl-3.0",
+      "urls": [
+        "bzz-raw://aca0ef971dcaa821745e1681db617783750202a308034b3c07fe4f9b55739702",
+        "dweb:/ipfs/QmR1P5GzoEw1Xn1QMfNgPXo5qpkZJ9YdeM8tx5ce9LcArZ"
+      ]
+    }
+  },
+  "version": 1
+}

@@ -1,0 +1,67 @@
+{
+  "compiler": {
+    "version": "0.8.15+commit.e14f2714"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [],
+    "devdoc": {
+      "author": "Solmate (https://github.com/Rari-Capital/solmate/blob/main/src/utils/SafeTransferLib.sol)Modified from Gnosis (https://github.com/gnosis/gp-v2-contracts/blob/main/src/contracts/libraries/GPv2SafeERC20.sol)",
+      "details": "Use with caution! Some functions in this library knowingly create dirty bits at the destination of the free memory pointer.Note that none of the functions in this library check that a token has code at all! That responsibility is delegated to the caller.",
+      "kind": "dev",
+      "methods": {},
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {},
+      "notice": "Safe ETH and ERC20 transfer library that gracefully handles missing return values.",
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "SafeTransferLib.sol": "SafeTransferLib"
+    },
+    "debug": {
+      "revertStrings": "strip"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "none"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": [
+      ":@openzeppelin/=node_modules/@openzeppelin/",
+      ":@uniswap/=node_modules/@uniswap/",
+      ":build/=/",
+      ":ds-test/=lib/forge-std/lib/ds-test/src/",
+      ":forge-std/=lib/forge-std/src/",
+      ":hardhat/=node_modules/hardhat/"
+    ],
+    "viaIR": true
+  },
+  "sources": {
+    "ERC20.sol": {
+      "keccak256": "0x446f8ef0df6b2b354aebad57597d3cfb8f00d184a6b1a559e70ad2098fd0285a",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://856d220962e1b24efc92b0c2ef31e87ab0b43838e90df5ca3042a08013115951",
+        "dweb:/ipfs/QmWuLL8Vk7DDqNn17KZxLxrYsa8R5MdFtZyFw6pAcerDYg"
+      ]
+    },
+    "SafeTransferLib.sol": {
+      "keccak256": "0xbc990c11ceb0bf7b4cf3d1f944b453683f0852d0a62101b0e17de62f3e7e0636",
+      "license": "AGPL-3.0-only",
+      "urls": [
+        "bzz-raw://80b2b747c84a0a7aca8d65035d5607c7eb8a2ce6014f9db638ba332449d0fd38",
+        "dweb:/ipfs/QmUEky7184PbnEzemVYQC2vbPG55hLU8gPhzrmdeEQ1d8Q"
+      ]
+    }
+  },
+  "version": 1
+}

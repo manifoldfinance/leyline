@@ -1,0 +1,114 @@
+{
+  "compiler": {
+    "version": "0.8.15+commit.e14f2714"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "inputs": [],
+        "name": "IdenticalAddresses",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InsufficientLiquidity",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InvalidPath",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "Overflow",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "ZeroAddress",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "ZeroAmount",
+        "type": "error"
+      }
+    ],
+    "devdoc": {
+      "author": "CommodityStream, Inc",
+      "kind": "dev",
+      "methods": {},
+      "title": "OpenMevLibrary",
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {},
+      "notice": "Optimal MEV library to support OpenMevRouter",
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "OpenMevLibrary.sol": "OpenMevLibrary"
+    },
+    "debug": {
+      "revertStrings": "strip"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "none"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": [
+      ":@openzeppelin/=node_modules/@openzeppelin/",
+      ":@uniswap/=node_modules/@uniswap/",
+      ":build/=/",
+      ":ds-test/=lib/forge-std/lib/ds-test/src/",
+      ":forge-std/=lib/forge-std/src/",
+      ":hardhat/=node_modules/hardhat/"
+    ],
+    "viaIR": true
+  },
+  "sources": {
+    "IUniswapV2Factory.sol": {
+      "keccak256": "0x58cc44883e51050422ac5c6deaa9fe818141c85154b2710f989349cb364edcc6",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://fd201f9078066b02b8b21d8c21e30a0f25a6b7b18050a83d75d9a4ee9bdae1f0",
+        "dweb:/ipfs/QmYvT4bJSbRQfVt6A2p1PTEbEgtX9AKRD1mwRMAiNDRDYH"
+      ]
+    },
+    "IUniswapV2Pair.sol": {
+      "keccak256": "0xeb4a2734a0f1e057bc45bd5831614e84159ea3e0bdeb74afa569378024bb0b14",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://fbf37e92eebb821f5643c8d780123f9a490d5676fa058d8b70df9be6761c99ac",
+        "dweb:/ipfs/QmPNNgP29EQQuJPscNYcG7aerCyqxy4ZuyLRPXLfhYoGNH"
+      ]
+    },
+    "OpenMevLibrary.sol": {
+      "keccak256": "0x749491764afee344b22cfabea698eae250ec280c9602d09b65743486ee58e517",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://4f0c3d11481e074ae3b1f00cef7ad14878eadca406c19047a95a53a633fc93a0",
+        "dweb:/ipfs/Qmb7tgVKwGBEKQrCZ3YgcgKZRbt2Qy4heUcRD4hBHJcMgc"
+      ]
+    },
+    "Uint512.sol": {
+      "keccak256": "0xb2c8b8b27f407ba0edcaec23931aa3102a9a62104026b6b45d8e494c285cb3cf",
+      "license": "GPLv3",
+      "urls": [
+        "bzz-raw://6d4ae175e170ad914e198baacb864483be641ad9c91e87a171d58d7d592c9fe4",
+        "dweb:/ipfs/QmeR329Jc8HAVGVohA9hvGqEuuY7fM2fhxV9jbADYRfa23"
+      ]
+    }
+  },
+  "version": 1
+}

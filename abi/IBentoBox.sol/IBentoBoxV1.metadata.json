@@ -1,0 +1,115 @@
+{
+  "compiler": {
+    "version": "0.8.15+commit.e14f2714"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "inputs": [
+          {
+            "internalType": "contract IFlashBorrower",
+            "name": "borrower",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "receiver",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes",
+            "name": "data",
+            "type": "bytes"
+          }
+        ],
+        "name": "flashLoan",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          }
+        ],
+        "name": "totals",
+        "outputs": [
+          {
+            "internalType": "uint128",
+            "name": "elastic",
+            "type": "uint128"
+          },
+          {
+            "internalType": "uint128",
+            "name": "base",
+            "type": "uint128"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "kind": "dev",
+      "methods": {},
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {},
+      "notice": "Minimal interface for BentoBox token vault (V1) interactions",
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "IBentoBox.sol": "IBentoBoxV1"
+    },
+    "debug": {
+      "revertStrings": "strip"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "none"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": [
+      ":@openzeppelin/=node_modules/@openzeppelin/",
+      ":@uniswap/=node_modules/@uniswap/",
+      ":build/=/",
+      ":ds-test/=lib/forge-std/lib/ds-test/src/",
+      ":forge-std/=lib/forge-std/src/",
+      ":hardhat/=node_modules/hardhat/"
+    ],
+    "viaIR": true
+  },
+  "sources": {
+    "IBentoBox.sol": {
+      "keccak256": "0xc66b95543ca43975eccd2d6949f3aa478ed478d31bdaad1e08f9ee80727a5216",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://9e525ec05b7e6c44d440b2190a83b7429550dad92b12095007a8c39cbf36ab64",
+        "dweb:/ipfs/QmPZvpdZ7SxuHrH4x234hnNJJSiC65QSVdG4CvwdcmtVFT"
+      ]
+    }
+  },
+  "version": 1
+}

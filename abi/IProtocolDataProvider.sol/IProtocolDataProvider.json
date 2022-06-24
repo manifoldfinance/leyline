@@ -1,0 +1,242 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "asset",
+          "type": "address"
+        }
+      ],
+      "name": "getReserveData",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "availableLiquidity",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getReserveData(address)": "35ea6a75"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.15+commit.e14f2714\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"asset\",\"type\":\"address\"}],\"name\":\"getReserveData\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"availableLiquidity\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"IProtocolDataProvider.sol\":\"IProtocolDataProvider\"},\"debug\":{\"revertStrings\":\"strip\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":@uniswap/=node_modules/@uniswap/\",\":build/=/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\"],\"viaIR\":true},\"sources\":{\"IProtocolDataProvider.sol\":{\"keccak256\":\"0x9ea1fe06e046b96735fa9d15e85ea1d9507199729fec99aad6999f83d609308a\",\"license\":\"agpl-3.0\",\"urls\":[\"bzz-raw://b89a3cfcd95f34d4796e30f4eef96ec6763c31ec59b1b3c0d011b4a595d24446\",\"dweb:/ipfs/QmT5UnPb9CgALqf24isnYcrKwgFP53dP4uiUpDEAp9jaGe\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.15+commit.e14f2714"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "asset",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getReserveData",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "availableLiquidity",
+              "type": "uint256"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":build/=/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "IProtocolDataProvider.sol": "IProtocolDataProvider"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "IProtocolDataProvider.sol": {
+        "keccak256": "0x9ea1fe06e046b96735fa9d15e85ea1d9507199729fec99aad6999f83d609308a",
+        "urls": [
+          "bzz-raw://b89a3cfcd95f34d4796e30f4eef96ec6763c31ec59b1b3c0d011b4a595d24446",
+          "dweb:/ipfs/QmT5UnPb9CgALqf24isnYcrKwgFP53dP4uiUpDEAp9jaGe"
+        ],
+        "license": "agpl-3.0"
+      }
+    },
+    "version": 1
+  },
+  "irOptimized": "",
+  "ast": {
+    "absolutePath": "IProtocolDataProvider.sol",
+    "id": 1046,
+    "exportedSymbols": {
+      "IProtocolDataProvider": [
+        1045
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:2007:7",
+    "nodes": [
+      {
+        "id": 1037,
+        "nodeType": "PragmaDirective",
+        "src": "37:32:7",
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".15",
+          "<",
+          "0.9",
+          ".0"
+        ]
+      },
+      {
+        "id": 1045,
+        "nodeType": "ContractDefinition",
+        "src": "196:1847:7",
+        "nodes": [
+          {
+            "id": 1044,
+            "nodeType": "FunctionDefinition",
+            "src": "1436:90:7",
+            "functionSelector": "35ea6a75",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getReserveData",
+            "nameLocation": "1445:14:7",
+            "parameters": {
+              "id": 1040,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1039,
+                  "mutability": "mutable",
+                  "name": "asset",
+                  "nameLocation": "1468:5:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1044,
+                  "src": "1460:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1038,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1460:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1459:15:7"
+            },
+            "returnParameters": {
+              "id": 1043,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1042,
+                  "mutability": "mutable",
+                  "name": "availableLiquidity",
+                  "nameLocation": "1506:18:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1044,
+                  "src": "1498:26:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1041,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1498:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1497:28:7"
+            },
+            "scope": 1045,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IProtocolDataProvider",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          1045
+        ],
+        "name": "IProtocolDataProvider",
+        "nameLocation": "206:21:7",
+        "scope": 1046,
+        "usedErrors": []
+      }
+    ],
+    "license": "agpl-3.0"
+  },
+  "id": 7
+}

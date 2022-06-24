@@ -1,0 +1,1795 @@
+{
+  "compiler": {
+    "version": "0.8.15+commit.e14f2714"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "inputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "inputs": [],
+        "name": "ExcessiveInputAmount",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "ExecuteNotAuthorized",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "Expired",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "IdenticalAddresses",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InsufficientAAmount",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InsufficientAllowance",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InsufficientBAmount",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InsufficientLiquidity",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InsufficientLiquidity",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InsufficientOutputAmount",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InvalidPath",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "InvalidPath",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "NoReceivers",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "NoTokens",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "NotPercent",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "Overflow",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "TokenIsFeeOnTransfer",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "TransferFailed",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "Unauthorized",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "ZeroAddress",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "ZeroAddress",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "ZeroAmount",
+        "type": "error"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amountIn",
+            "type": "uint256"
+          }
+        ],
+        "name": "LoanError",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "user",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "MEV",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "previousOwner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+      },
+      {
+        "stateMutability": "payable",
+        "type": "fallback"
+      },
+      {
+        "inputs": [],
+        "name": "acceptOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "tokenA",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "tokenB",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountADesired",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountBDesired",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountAMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountBMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          }
+        ],
+        "name": "addLiquidity",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountA",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountB",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "liquidity",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountTokenDesired",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountTokenMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountETHMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          }
+        ],
+        "name": "addLiquidityETH",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountToken",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountETH",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "liquidity",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "cancelOwnershipTransfer",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address[]",
+            "name": "assets",
+            "type": "address[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "amounts",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "premiums",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "address",
+            "name": "initiator",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes",
+            "name": "params",
+            "type": "bytes"
+          }
+        ],
+        "name": "executeOperation",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountOut",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "reserveIn",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "reserveOut",
+            "type": "uint256"
+          }
+        ],
+        "name": "getAmountIn",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountIn",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountIn",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "reserveIn",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "reserveOut",
+            "type": "uint256"
+          }
+        ],
+        "name": "getAmountOut",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountOut",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountOut",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address[]",
+            "name": "path",
+            "type": "address[]"
+          }
+        ],
+        "name": "getAmountsIn",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "amounts",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountIn",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address[]",
+            "name": "path",
+            "type": "address[]"
+          }
+        ],
+        "name": "getAmountsOut",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "amounts",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "percentage",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address[]",
+            "name": "tokens",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address[]",
+            "name": "receivers",
+            "type": "address[]"
+          }
+        ],
+        "name": "harvest",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "isOwner",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "sender",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "fee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes",
+            "name": "data",
+            "type": "bytes"
+          }
+        ],
+        "name": "onFlashLoan",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountA",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "reserveA",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "reserveB",
+            "type": "uint256"
+          }
+        ],
+        "name": "quote",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountB",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "tokenA",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "tokenB",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "liquidity",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountAMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountBMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          }
+        ],
+        "name": "removeLiquidity",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountA",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountB",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "liquidity",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountTokenMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountETHMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          }
+        ],
+        "name": "removeLiquidityETH",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountToken",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountETH",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "liquidity",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountTokenMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountETHMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          }
+        ],
+        "name": "removeLiquidityETHSupportingFeeOnTransferTokens",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountETH",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "liquidity",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountTokenMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountETHMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "approveMax",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint8",
+            "name": "v",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "r",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "s",
+            "type": "bytes32"
+          }
+        ],
+        "name": "removeLiquidityETHWithPermit",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountToken",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountETH",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "liquidity",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountTokenMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountETHMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "approveMax",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint8",
+            "name": "v",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "r",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "s",
+            "type": "bytes32"
+          }
+        ],
+        "name": "removeLiquidityETHWithPermitSupportingFeeOnTransferTokens",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountETH",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "tokenA",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "tokenB",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "liquidity",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountAMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountBMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "approveMax",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint8",
+            "name": "v",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "r",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "s",
+            "type": "bytes32"
+          }
+        ],
+        "name": "removeLiquidityWithPermit",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountA",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountB",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountOut",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address[]",
+            "name": "path",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          }
+        ],
+        "name": "swapETHForExactTokens",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "amounts",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountOutMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address[]",
+            "name": "path",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          }
+        ],
+        "name": "swapExactETHForTokens",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "amounts",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountOutMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address[]",
+            "name": "path",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          }
+        ],
+        "name": "swapExactETHForTokensSupportingFeeOnTransferTokens",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountIn",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountOutMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address[]",
+            "name": "path",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          }
+        ],
+        "name": "swapExactTokensForETH",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "amounts",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountIn",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountOutMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address[]",
+            "name": "path",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          }
+        ],
+        "name": "swapExactTokensForETHSupportingFeeOnTransferTokens",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountIn",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountOutMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address[]",
+            "name": "path",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          }
+        ],
+        "name": "swapExactTokensForTokens",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "amounts",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountIn",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountOutMin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address[]",
+            "name": "path",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          }
+        ],
+        "name": "swapExactTokensForTokensSupportingFeeOnTransferTokens",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountOut",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountInMax",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address[]",
+            "name": "path",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          }
+        ],
+        "name": "swapTokensForExactETH",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "amounts",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amountOut",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountInMax",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address[]",
+            "name": "path",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          }
+        ],
+        "name": "swapTokensForExactTokens",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "amounts",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bool",
+            "name": "isActive",
+            "type": "bool"
+          },
+          {
+            "internalType": "address",
+            "name": "asset",
+            "type": "address"
+          }
+        ],
+        "name": "updateAaveAsset",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "updateAllAaveAssets",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "stateMutability": "payable",
+        "type": "receive"
+      }
+    ],
+    "devdoc": {
+      "author": "Sandy Bradley <sandy@commoditystream.com>, Sam Bacha <sam@commoditystream.com>, ControlCandP",
+      "kind": "dev",
+      "methods": {
+        "acceptOwnership()": {
+          "details": "Transfers ownership of the contract to the caller. Can only be called by a new potential owner set by the current owner."
+        },
+        "addLiquidity(address,address,uint256,uint256,uint256,uint256,address,uint256)": {
+          "params": {
+            "amountADesired": "Amount of token A desired to add to pool",
+            "amountAMin": "Minimum amount of token A, can be 0",
+            "amountBDesired": "Amount of token B desired to add to pool",
+            "amountBMin": "Minimum amount of token B, can be 0",
+            "deadline": "Unix timestamp in seconds after which the transaction will revert",
+            "to": "Address to receive liquidity token",
+            "tokenA": "Token in pool",
+            "tokenB": "Token in pool"
+          },
+          "returns": {
+            "amountA": "exact amount of token A added to pool",
+            "amountB": "exact amount of token B added to pool",
+            "liquidity": "amount of liquidity token received"
+          }
+        },
+        "addLiquidityETH(address,uint256,uint256,uint256,address,uint256)": {
+          "params": {
+            "amountETHMin": "Minimum amount of ETH, can be 0",
+            "amountTokenDesired": "Amount of token desired to add to pool",
+            "amountTokenMin": "Minimum amount of token, can be 0",
+            "deadline": "Unix timestamp in seconds after which the transaction will revert",
+            "to": "Address to receive liquidity token",
+            "token": "Token in pool"
+          },
+          "returns": {
+            "amountETH": "exact amount of ETH added to pool",
+            "amountToken": "exact amount of token added to pool",
+            "liquidity": "amount of liquidity token received"
+          }
+        },
+        "cancelOwnershipTransfer()": {
+          "details": "Cancel a transfer of ownership to a new account. Can only be called by the current owner."
+        },
+        "constructor": {
+          "details": "Initialize contract by setting aave assets"
+        },
+        "executeOperation(address[],uint256[],uint256[],address,bytes)": {
+          "details": "Reverts if not profitable.",
+          "params": {
+            "amounts": "Array of amounts to loan",
+            "assets": "Array of tokens to loan",
+            "initiator": "Address of flashloan initiator",
+            "params": "Encoded factories and tokens",
+            "premiums": "Array of premiums to repay on loan amounts"
+          },
+          "returns": {
+            "_0": "success indicating success"
+          }
+        },
+        "harvest(uint256,address[],address[])": {
+          "params": {
+            "percentage": "Percentage of balance to distribute",
+            "receivers": "Array of addresses for receiving distribution",
+            "tokens": "Array of token addresses to distribute"
+          }
+        },
+        "isOwner()": {
+          "details": "Returns true if the caller is the current owner."
+        },
+        "onFlashLoan(address,address,uint256,uint256,bytes)": {
+          "details": "Reverts if not profitable.",
+          "params": {
+            "amount": "Amount to loan",
+            "data": "Encoded factories and tokens",
+            "fee": "Fee to repay on loan amount",
+            "sender": "Address of flashloan initiator",
+            "token": "Token to loan"
+          }
+        },
+        "owner()": {
+          "details": "Returns the address of the current owner."
+        },
+        "removeLiquidity(address,address,uint256,uint256,uint256,address,uint256)": {
+          "params": {
+            "amountAMin": "Minimum amount of token A, can be 0",
+            "amountBMin": "Minimum amount of token B, can be 0",
+            "deadline": "Unix timestamp in seconds after which the transaction will revert",
+            "liquidity": "Amount of liquidity tokens to remove",
+            "to": "Address to receive pool tokens",
+            "tokenA": "Token in pool",
+            "tokenB": "Token in pool"
+          },
+          "returns": {
+            "amountA": "Amount of token A received",
+            "amountB": "Amount of token B received"
+          }
+        },
+        "removeLiquidityETH(address,uint256,uint256,uint256,address,uint256)": {
+          "params": {
+            "amountETHMin": "Minimum amount of ETH, can be 0",
+            "amountTokenMin": "Minimum amount of token, can be 0",
+            "deadline": "Unix timestamp in seconds after which the transaction will revert",
+            "liquidity": "Amount of liquidity tokens to remove",
+            "to": "Address to receive pool tokens",
+            "token": "Token in pool"
+          },
+          "returns": {
+            "amountETH": "Amount of ETH received",
+            "amountToken": "Amount of token received"
+          }
+        },
+        "removeLiquidityETHSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256)": {
+          "params": {
+            "amountETHMin": "Minimum amount of ETH, can be 0",
+            "amountTokenMin": "Minimum amount of token, can be 0",
+            "deadline": "Unix timestamp in seconds after which the transaction will revert",
+            "liquidity": "Amount of liquidity tokens to remove",
+            "to": "Address to receive pool tokens",
+            "token": "Token in pool"
+          },
+          "returns": {
+            "amountETH": "Amount of ETH received"
+          }
+        },
+        "removeLiquidityETHWithPermit(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)": {
+          "params": {
+            "amountETHMin": "Minimum amount of ETH, can be 0",
+            "amountTokenMin": "Minimum amount of token, can be 0",
+            "approveMax": "Whether or not the approval amount in the signature is for liquidity or uint(-1)",
+            "deadline": "Unix timestamp in seconds after which the transaction will revert",
+            "liquidity": "Amount of liquidity tokens to remove",
+            "r": "The r component of the permit signature",
+            "s": "The s component of the permit signature",
+            "to": "Address to receive pool tokens",
+            "token": "Token in pool",
+            "v": "The v component of the permit signature"
+          },
+          "returns": {
+            "amountETH": "Amount of ETH received",
+            "amountToken": "Amount of token received"
+          }
+        },
+        "removeLiquidityETHWithPermitSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)": {
+          "params": {
+            "amountETHMin": "Minimum amount of ETH, can be 0",
+            "amountTokenMin": "Minimum amount of token, can be 0",
+            "approveMax": "Whether or not the approval amount in the signature is for liquidity or uint(-1)",
+            "deadline": "Unix timestamp in seconds after which the transaction will revert",
+            "liquidity": "Amount of liquidity tokens to remove",
+            "r": "The r component of the permit signature",
+            "s": "The s component of the permit signature",
+            "to": "Address to receive pool tokens",
+            "token": "Token in pool",
+            "v": "The v component of the permit signature"
+          },
+          "returns": {
+            "amountETH": "Amount of ETH received"
+          }
+        },
+        "removeLiquidityWithPermit(address,address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)": {
+          "params": {
+            "amountAMin": "Minimum amount of token A, can be 0",
+            "amountBMin": "Minimum amount of token B, can be 0",
+            "approveMax": "Whether or not the approval amount in the signature is for liquidity or uint(-1)",
+            "deadline": "Unix timestamp in seconds after which the transaction will revert",
+            "liquidity": "Amount of liquidity tokens to remove",
+            "r": "The r component of the permit signature",
+            "s": "The s component of the permit signature",
+            "to": "Address to receive pool tokens",
+            "tokenA": "Token in pool",
+            "tokenB": "Token in pool",
+            "v": "The v component of the permit signature"
+          },
+          "returns": {
+            "amountA": "Amount of token A received",
+            "amountB": "Amount of token B received"
+          }
+        },
+        "swapETHForExactTokens(uint256,address[],address,uint256)": {
+          "details": "Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.",
+          "params": {
+            "amountOut": "Amount of output tokens that must be received",
+            "deadline": "Unix timestamp in seconds after which the transaction will revert",
+            "path": "Array of token addresses. path.length must be >= 2. Pools for each consecutive pair of addresses must exist and have liquidity",
+            "to": "Address of receiver"
+          },
+          "returns": {
+            "amounts": "Array of input token amount and all subsequent output token amounts"
+          }
+        },
+        "swapExactETHForTokens(uint256,address[],address,uint256)": {
+          "details": "Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.",
+          "params": {
+            "amountOutMin": "Minimum amount of output tokens that must be received",
+            "deadline": "Unix timestamp in seconds after which the transaction will revert",
+            "path": "Array of token addresses. path.length must be >= 2. Pools for each consecutive pair of addresses must exist and have liquidity",
+            "to": "Address of receiver"
+          },
+          "returns": {
+            "amounts": "Array of input token amount and all subsequent output token amounts"
+          }
+        },
+        "swapExactETHForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256)": {
+          "details": "Require has been replaced with revert for gas optimization. Attempt to back-run swaps.",
+          "params": {
+            "amountOutMin": "Minimum amount of output tokens that must be received",
+            "deadline": "Unix timestamp in seconds after which the transaction will revert",
+            "path": "Array of token addresses. path.length must be >= 2. Pools for each consecutive pair of addresses must exist and have liquidity",
+            "to": "Address of receiver"
+          }
+        },
+        "swapExactTokensForETH(uint256,uint256,address[],address,uint256)": {
+          "details": "Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.",
+          "params": {
+            "amountIn": "Amount of input tokens to send.",
+            "amountOutMin": "Minimum amount of ETH that must be received",
+            "deadline": "Unix timestamp in seconds after which the transaction will revert",
+            "path": "Array of token addresses. path.length must be >= 2. Pools for each consecutive pair of addresses must exist and have liquidity",
+            "to": "Address of receiver"
+          },
+          "returns": {
+            "amounts": "Array of input token amount and all subsequent output token amounts"
+          }
+        },
+        "swapExactTokensForETHSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)": {
+          "details": "Require has been replaced with revert for gas optimization. Attempt to back-run swaps.",
+          "params": {
+            "amountIn": "Amount of input tokens to send.",
+            "amountOutMin": "Minimum amount of ETH that must be received",
+            "deadline": "Unix timestamp in seconds after which the transaction will revert",
+            "path": "Array of token addresses. path.length must be >= 2. Pools for each consecutive pair of addresses must exist and have liquidity",
+            "to": "Address of receiver"
+          }
+        },
+        "swapExactTokensForTokens(uint256,uint256,address[],address,uint256)": {
+          "details": "Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.",
+          "params": {
+            "amountIn": "Amount of input tokens to send.",
+            "amountOutMin": "Minimum amount of output tokens that must be received",
+            "deadline": "Unix timestamp in seconds after which the transaction will revert",
+            "path": "Array of token addresses. path.length must be >= 2. Pools for each consecutive pair of addresses must exist and have liquidity",
+            "to": "Address of receiver"
+          },
+          "returns": {
+            "amounts": "Array of input token amount and all subsequent output token amounts"
+          }
+        },
+        "swapExactTokensForTokensSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)": {
+          "details": "Require has been replaced with revert for gas optimization. Attempt to back-run swaps.",
+          "params": {
+            "amountIn": "Amount of input tokens to send.",
+            "amountOutMin": "Minimum amount of output tokens that must be received",
+            "deadline": "Unix timestamp in seconds after which the transaction will revert",
+            "path": "Array of token addresses. path.length must be >= 2. Pools for each consecutive pair of addresses must exist and have liquidity",
+            "to": "Address of receiver"
+          }
+        },
+        "swapTokensForExactETH(uint256,uint256,address[],address,uint256)": {
+          "details": "Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.",
+          "params": {
+            "amountInMax": "Maximum amount of input tokens",
+            "amountOut": "Amount of ETH to receive",
+            "deadline": "Unix timestamp in seconds after which the transaction will revert",
+            "path": "Array of token addresses. path.length must be >= 2. Pools for each consecutive pair of addresses must exist and have liquidity",
+            "to": "Address of receiver"
+          },
+          "returns": {
+            "amounts": "Array of input token amount and all subsequent output token amounts"
+          }
+        },
+        "swapTokensForExactTokens(uint256,uint256,address[],address,uint256)": {
+          "details": "Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.",
+          "params": {
+            "amountInMax": "Maximum amount of input tokens",
+            "amountOut": "Amount of output tokens to receive",
+            "deadline": "Unix timestamp in seconds after which the transaction will revert",
+            "path": "Array of token addresses. path.length must be >= 2. Pools for each consecutive pair of addresses must exist and have liquidity",
+            "to": "Address of receiver"
+          },
+          "returns": {
+            "amounts": "Array of input token amount and all subsequent output token amounts"
+          }
+        },
+        "transferOwnership(address)": {
+          "details": "Allows a new account (`newOwner`) to accept ownership. Can only be called by the current owner."
+        },
+        "updateAaveAsset(bool,address)": {
+          "params": {
+            "asset": "Address of asset",
+            "isActive": "Boolean flagging whether to use the asset for Aave flashloans"
+          }
+        }
+      },
+      "title": "OpenMevRouter",
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {
+        "addLiquidity(address,address,uint256,uint256,uint256,uint256,address,uint256)": {
+          "notice": "Adds liquidity to an ERC-20⇄ERC-20 pool. msg.sender should have already given the router an allowance of at least amountADesired/amountBDesired on tokenA/tokenB"
+        },
+        "addLiquidityETH(address,uint256,uint256,uint256,address,uint256)": {
+          "notice": "Adds liquidity to an ERC-20⇄WETH pool with ETH. msg.sender should have already given the router an allowance of at least amountTokenDesired on token. msg.value is treated as a amountETHDesired. Leftover ETH, if any, is returned to msg.sender"
+        },
+        "executeOperation(address[],uint256[],uint256[],address,bytes)": {
+          "notice": "Called from Aave Lending pool after contract has received the flash loaned amount (https://docs.aave.com/developers/v/2.0/guides/flash-loans)"
+        },
+        "harvest(uint256,address[],address[])": {
+          "notice": "Multi-sig consensus call to distribute a given percentage of specified tokens to specified receivers."
+        },
+        "onFlashLoan(address,address,uint256,uint256,bytes)": {
+          "notice": "Called from BentoBox Lending pool after contract has received the flash loaned amount"
+        },
+        "removeLiquidity(address,address,uint256,uint256,uint256,address,uint256)": {
+          "notice": "Removes liquidity from an ERC-20⇄ERC-20 pool. msg.sender should have already given the router an allowance of at least liquidity on the pool."
+        },
+        "removeLiquidityETH(address,uint256,uint256,uint256,address,uint256)": {
+          "notice": "Removes liquidity from an ERC-20⇄WETH pool and receive ETH. msg.sender should have already given the router an allowance of at least liquidity on the pool."
+        },
+        "removeLiquidityETHSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256)": {
+          "notice": "Identical to removeLiquidityETH, but succeeds for tokens that take a fee on transfer. msg.sender should have already given the router an allowance of at least liquidity on the pool."
+        },
+        "removeLiquidityETHWithPermit(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)": {
+          "notice": "Removes liquidity from an ERC-20⇄WETTH pool and receive ETH without pre-approval, thanks to permit"
+        },
+        "removeLiquidityETHWithPermitSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)": {
+          "notice": "Identical to removeLiquidityETHWithPermit, but succeeds for tokens that take a fee on transfer."
+        },
+        "removeLiquidityWithPermit(address,address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)": {
+          "notice": "Removes liquidity from an ERC-20⇄ERC-20 pool without pre-approval, thanks to permit."
+        },
+        "swapETHForExactTokens(uint256,address[],address,uint256)": {
+          "notice": "Receive an exact amount of tokens for as little ETH as possible, along the route determined by the path. The first element of path must be WETH9. Leftover ETH, if any, is returned to msg.sender. amountInMax = msg.value"
+        },
+        "swapExactETHForTokens(uint256,address[],address,uint256)": {
+          "notice": "Swaps an exact amount of ETH for as many output tokens as possible, along the route determined by the path. The first element of path must be WETH9, the last is the output token. amountIn = msg.value"
+        },
+        "swapExactETHForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256)": {
+          "notice": "Identical to swapExactETHForTokens, but succeeds for tokens that take a fee on transfer. amountIn = msg.value"
+        },
+        "swapExactTokensForETH(uint256,uint256,address[],address,uint256)": {
+          "notice": "Swaps an exact amount of tokens for as much ETH as possible, along the route determined by the path. The first element of path is the input token, the last must be WETH9."
+        },
+        "swapExactTokensForETHSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)": {
+          "notice": "Identical to swapExactTokensForETH, but succeeds for tokens that take a fee on transfer."
+        },
+        "swapExactTokensForTokens(uint256,uint256,address[],address,uint256)": {
+          "notice": "Swaps an exact amount of input tokens for as many output tokens as possible, along the route determined by the path. The first element of path is the input token, the last is the output token, and any intermediate elements represent intermediate pairs to trade through. msg.sender should have already given the router an allowance of at least amountIn on the input token."
+        },
+        "swapExactTokensForTokensSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)": {
+          "notice": "Identical to swapExactTokensForTokens, but succeeds for tokens that take a fee on transfer. msg.sender should have already given the router an allowance of at least amountIn on the input token."
+        },
+        "swapTokensForExactETH(uint256,uint256,address[],address,uint256)": {
+          "notice": "Receive an exact amount of ETH for as few input tokens as possible, along the route determined by the path. The first element of path is the input token, the last must be WETH9. msg.sender should have already given the router an allowance of at least amountInMax on the input token."
+        },
+        "swapTokensForExactTokens(uint256,uint256,address[],address,uint256)": {
+          "notice": "Receive an exact amount of output tokens for as few input tokens as possible, along the route determined by the path. msg.sender should have already given the router an allowance of at least amountInMax on the input token."
+        },
+        "updateAaveAsset(bool,address)": {
+          "notice": "Update internal Aave asset flag"
+        },
+        "updateAllAaveAssets()": {
+          "notice": "Update all internal Aave assets"
+        }
+      },
+      "notice": "Optimal MEV router contract (IUniswapV2Router compatible)",
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "OpenMevRouter.sol": "OpenMevRouter"
+    },
+    "debug": {
+      "revertStrings": "strip"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "none"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": [
+      ":@openzeppelin/=node_modules/@openzeppelin/",
+      ":@uniswap/=node_modules/@uniswap/",
+      ":build/=/",
+      ":ds-test/=lib/forge-std/lib/ds-test/src/",
+      ":forge-std/=lib/forge-std/src/",
+      ":hardhat/=node_modules/hardhat/"
+    ],
+    "viaIR": true
+  },
+  "sources": {
+    "ERC20.sol": {
+      "keccak256": "0x446f8ef0df6b2b354aebad57597d3cfb8f00d184a6b1a559e70ad2098fd0285a",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://856d220962e1b24efc92b0c2ef31e87ab0b43838e90df5ca3042a08013115951",
+        "dweb:/ipfs/QmWuLL8Vk7DDqNn17KZxLxrYsa8R5MdFtZyFw6pAcerDYg"
+      ]
+    },
+    "IBentoBox.sol": {
+      "keccak256": "0xc66b95543ca43975eccd2d6949f3aa478ed478d31bdaad1e08f9ee80727a5216",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://9e525ec05b7e6c44d440b2190a83b7429550dad92b12095007a8c39cbf36ab64",
+        "dweb:/ipfs/QmPZvpdZ7SxuHrH4x234hnNJJSiC65QSVdG4CvwdcmtVFT"
+      ]
+    },
+    "ILendingPool.sol": {
+      "keccak256": "0x4f761a812088629d7c4b13f19fe5a2116dcc29deb316f81e145062abde9f4028",
+      "license": "agpl-3.0",
+      "urls": [
+        "bzz-raw://aca0ef971dcaa821745e1681db617783750202a308034b3c07fe4f9b55739702",
+        "dweb:/ipfs/QmR1P5GzoEw1Xn1QMfNgPXo5qpkZJ9YdeM8tx5ce9LcArZ"
+      ]
+    },
+    "IOpenMevRouter.sol": {
+      "keccak256": "0xa1bf6bb8a681a12a11c2b1e5801f38ed7c915ea6590a1b5845a15c844e79123c",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://9e4548fac80db3c2b882bc1da6840451a7fb969a91764a4dfca0e5d350a04d43",
+        "dweb:/ipfs/QmXg3HFh9bTT8XMTbpQDnaQazsbAu6ciZi8WfHEtmSvw4e"
+      ]
+    },
+    "IProtocolDataProvider.sol": {
+      "keccak256": "0x9ea1fe06e046b96735fa9d15e85ea1d9507199729fec99aad6999f83d609308a",
+      "license": "agpl-3.0",
+      "urls": [
+        "bzz-raw://b89a3cfcd95f34d4796e30f4eef96ec6763c31ec59b1b3c0d011b4a595d24446",
+        "dweb:/ipfs/QmT5UnPb9CgALqf24isnYcrKwgFP53dP4uiUpDEAp9jaGe"
+      ]
+    },
+    "IUniswapV2Factory.sol": {
+      "keccak256": "0x58cc44883e51050422ac5c6deaa9fe818141c85154b2710f989349cb364edcc6",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://fd201f9078066b02b8b21d8c21e30a0f25a6b7b18050a83d75d9a4ee9bdae1f0",
+        "dweb:/ipfs/QmYvT4bJSbRQfVt6A2p1PTEbEgtX9AKRD1mwRMAiNDRDYH"
+      ]
+    },
+    "IUniswapV2Pair.sol": {
+      "keccak256": "0xeb4a2734a0f1e057bc45bd5831614e84159ea3e0bdeb74afa569378024bb0b14",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://fbf37e92eebb821f5643c8d780123f9a490d5676fa058d8b70df9be6761c99ac",
+        "dweb:/ipfs/QmPNNgP29EQQuJPscNYcG7aerCyqxy4ZuyLRPXLfhYoGNH"
+      ]
+    },
+    "IWETH9.sol": {
+      "keccak256": "0x31c2ad22149edc87750d4097eb6c5ce58daadc672fd48979ca66acf269bd3313",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://4818bfab5b2feb2caecc0039d930a68384aa8592cedabfe9cfc4a86be7f04103",
+        "dweb:/ipfs/QmeYqzU46rgyXBJokTqpFf18qmga55iSb5knnULNVV7Jq6"
+      ]
+    },
+    "OpenMevLibrary.sol": {
+      "keccak256": "0x749491764afee344b22cfabea698eae250ec280c9602d09b65743486ee58e517",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://4f0c3d11481e074ae3b1f00cef7ad14878eadca406c19047a95a53a633fc93a0",
+        "dweb:/ipfs/Qmb7tgVKwGBEKQrCZ3YgcgKZRbt2Qy4heUcRD4hBHJcMgc"
+      ]
+    },
+    "OpenMevRouter.sol": {
+      "keccak256": "0xf65de2e9ec0bcb81e5f9b05f1520700c66b760abca40045669dc0c0b1a6146af",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://f1170c73b541278f5ba017657b2d82f84e73a31e1ca4379a3eaadfc6629042a9",
+        "dweb:/ipfs/QmUsM3TY1uckvjmetAxxvKF4CkoyiPZk8rc4TxbNxFG6UJ"
+      ]
+    },
+    "SafeTransferLib.sol": {
+      "keccak256": "0xbc990c11ceb0bf7b4cf3d1f944b453683f0852d0a62101b0e17de62f3e7e0636",
+      "license": "AGPL-3.0-only",
+      "urls": [
+        "bzz-raw://80b2b747c84a0a7aca8d65035d5607c7eb8a2ce6014f9db638ba332449d0fd38",
+        "dweb:/ipfs/QmUEky7184PbnEzemVYQC2vbPG55hLU8gPhzrmdeEQ1d8Q"
+      ]
+    },
+    "TwoStepOwnable.sol": {
+      "keccak256": "0xd7c4131102437397ebf5f3df2ff3be0e6e7655c57b23785e6a269697c0639580",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://1b91f0106a49b111e7982c610bca628949c9583440cbb85f1c6d6a26bddaaa0a",
+        "dweb:/ipfs/QmWHYNHpoaGezsuZk7rMHCvD7MKjMFVvX5wRwAn7WMmPYP"
+      ]
+    },
+    "Uint512.sol": {
+      "keccak256": "0xb2c8b8b27f407ba0edcaec23931aa3102a9a62104026b6b45d8e494c285cb3cf",
+      "license": "GPLv3",
+      "urls": [
+        "bzz-raw://6d4ae175e170ad914e198baacb864483be641ad9c91e87a171d58d7d592c9fe4",
+        "dweb:/ipfs/QmeR329Jc8HAVGVohA9hvGqEuuY7fM2fhxV9jbADYRfa23"
+      ]
+    }
+  },
+  "version": 1
+}
