@@ -1,0 +1,28 @@
+{
+  "name": "prom-target",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "build": "npx tsc",
+    "start-target": "npm run build && node build/target.js",
+    "start-proxy": "npm run build && node build/proxy.js",
+    "start-pm2": "pm2 start ecosystem.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "AGPL-3.0-only",
+  "description": "",
+  "dependencies": {
+    "@types/express": "^4.17.11",
+    "chalk": "^4.1.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "pm2": "^4.5.5",
+    "prom-client": "^13.1.0",
+    "web3": "^1.3.6"
+  },
+  "devDependencies": {
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  }
+}

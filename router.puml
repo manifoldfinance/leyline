@@ -1,0 +1,14 @@
+@startuml
+ 
+ !$TEST=%loadJSON("router-abi.json", $DEF)
+
+title ABI Encoding UML
+
+ rectangle Inner #tan as "
+    {{json
+    $TEST
+    }}
+    ABI Generated at %date()
+    "
+
+@enduml
