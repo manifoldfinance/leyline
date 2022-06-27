@@ -1,0 +1,19 @@
+[
+  "constructor(address)",
+  "error IdenticalAddresses()",
+  "error InsufficientAAmount()",
+  "error InsufficientAllowance()",
+  "error InsufficientBAmount()",
+  "error InsufficientLiquidity()",
+  "error InsufficientLiquidity()",
+  "error InsufficientOutputAmount()",
+  "error InvalidPath()",
+  "error Overflow()",
+  "error TransferFailed()",
+  "error ZeroAddress()",
+  "error ZeroAmount()",
+  "function router() view returns (address)",
+  "function swapAndStakeLiquidity(address,address,uint256,uint256) returns (uint256)",
+  "function swapETHAndStakeLiquidity(address,uint256) payable returns (uint256)",
+  "function withdrawLiquidityAndSwap(address,uint256,address,uint256) returns (uint256)"
+]

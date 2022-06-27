@@ -1,0 +1,4 @@
+[
+  "function flashLoan(address,address[],uint256[],uint256[],address,bytes,uint16)",
+  "function getReservesList() view returns (address[])"
+]

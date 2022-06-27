@@ -1,0 +1,10 @@
+[
+  "error Unauthorized()",
+  "error ZeroAddress()",
+  "event OwnershipTransferred(address indexed,address indexed)",
+  "function acceptOwnership()",
+  "function cancelOwnershipTransfer() payable",
+  "function isOwner() view returns (bool)",
+  "function owner() view returns (address)",
+  "function transferOwnership(address) payable"
+]

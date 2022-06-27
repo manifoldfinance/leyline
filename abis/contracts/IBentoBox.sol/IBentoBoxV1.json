@@ -1,0 +1,4 @@
+[
+  "function flashLoan(address,address,address,uint256,bytes)",
+  "function totals(address) returns (uint128, uint128)"
+]

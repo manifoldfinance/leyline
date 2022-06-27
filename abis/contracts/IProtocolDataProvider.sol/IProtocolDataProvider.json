@@ -1,0 +1,3 @@
+[
+  "function getReserveData(address) view returns (uint256)"
+]

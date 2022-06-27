@@ -1,0 +1,8 @@
+[
+  "error IdenticalAddresses()",
+  "error InsufficientLiquidity()",
+  "error InvalidPath()",
+  "error Overflow()",
+  "error ZeroAddress()",
+  "error ZeroAmount()"
+]
